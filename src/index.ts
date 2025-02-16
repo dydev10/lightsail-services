@@ -44,8 +44,8 @@ http.createServer(app).listen(PORT, undefined, undefined, () => {
 // Skip https if ssl cert path is not defined in env
 if (SSL_PORT && SSL_KEY_PATH?.length && SSL_CERT_PATH?.length) {
 	var sslOptions = {
-		key: fs.readFileSync(path.join(__dirname, SSL_KEY_PATH)),
-		cert: fs.readFileSync(path.join(__dirname, SSL_CERT_PATH)),
+		key: fs.readFileSync(SSL_KEY_PATH),
+		cert: fs.readFileSync(SSL_CERT_PATH),
 	};
 	// Create an HTTPS service identical to the HTTP service.
 	https.createServer(sslOptions, app).listen(SSL_PORT, undefined, undefined, () => {
