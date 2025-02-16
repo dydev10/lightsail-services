@@ -1,0 +1,10 @@
+# env files
+.env
+*.env
+
+# npm
+node_modules
+
+# outputs
+dist
+build
