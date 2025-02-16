@@ -10,6 +10,12 @@
     
     "noImplicitAny": true,
     "outDir": "./dist",
+
+    "baseUrl": "./",
+    "paths": {
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"]
+    },
   },
   "include": ["./src"]
 }
