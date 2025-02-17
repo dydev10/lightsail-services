@@ -42,6 +42,7 @@ http.createServer(app).listen(PORT, undefined, undefined, () => {
 
 
 // Skip https if ssl cert path is not defined in env
+// use undefined port to disable ssl server and let apache proxy handle SSL certs
 if (SSL_PORT && SSL_KEY_PATH?.length && SSL_CERT_PATH?.length) {
 	var sslOptions = {
 		key: fs.readFileSync(SSL_KEY_PATH),
